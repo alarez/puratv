@@ -42,16 +42,16 @@
 <body>
 
     <!-- Sticky Menu -->
-    <nav id="menu" class="navbar navbar-expand-md fixed-top">
+    <nav class="navbar navbar-expand-md fixed-top">
         <div class="container d-flex justify-content-between align-items-center">
             <a class="navbar-brand" href="#inicio">
                 <img src="/images/logo-Puratv-amarillo.png" alt="PuraTV" height="60">
             </a>
-            <ul class="navbar-nav flex-row gap-3 ms-auto">
+            <ul id="menu" class="navbar-nav flex-row gap-3 ms-auto">
                 <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
-                <li class="nav-item"><a class="nav-link" href="#oferta">Oferta</a></li>
-                <li class="nav-item"><a class="nav-link" href="#servicios">Servicios</a></li>
                 <li class="nav-item"><a class="nav-link" href="#planes">Planes</a></li>
+                <li class="nav-item"><a class="nav-link" href="#compatibilidad">Dispositivos</a></li>
+                <li class="nav-item"><a class="nav-link" href="#oferta">Oferta</a></li>
                 <li class="nav-item"><a class="nav-link" href="#como-funciona">¿Cómo funciona?</a></li>
                 <li class="nav-item"><a class="nav-link" href="#faq">Preguntas frecuentes</a></li>
                 <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
@@ -78,87 +78,7 @@
             </div>
         </section>
 
-
-        <section class="section" data-anchor="oferta">
-            <div class="container text-center">
-                <div class="row justify-content-center mb-5">
-                    <div class="col-lg-10">
-                        <h2 class="mb-3">Conectate al futuro del entretenimiento</h2>
-                        <p class="lead">Disfrutá más de 35,000 películas, eventos en vivo, deportes y contenido
-                            exclusivo de tus
-                            plataformas favoritas. <br>Todo en calidad 4K, FHD, HD o SD.</p>
-                    </div>
-                </div>
-
-                <div class="row g-4">
-                    <div class="col-sm-6 col-md-3">
-                        <div class="icon-box-card text-center p-4">
-                            <img src="/images/icons/peliculas_series.svg" alt="Películas y Series" class="mb-3"
-                                width="64">
-                            <h5>Películas y Series</h5>
-                            <p>Estrenos y clásicos al instante en cualquier dispositivo.</p>
-                            <a class="bdt-advanced-icon-box-readmore bdt-display-inline-block mt-3" href="#">
-                                <span class="bdt-button-icon-align-right">
-                                    <i aria-hidden="true" class="fa-fw fas fa-arrow-right"></i>
-                                </span>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-md-3">
-                        <div class="icon-box-card text-center p-4">
-                            <img src="/images/icons/eventos_en_vivo.svg" alt="Eventos en Vivo" class="mb-3" width="64">
-                            <h5>Eventos en Vivo</h5>
-                            <p>Accedé a eventos deportivos, conciertos y más sin cortes.</p>
-                            <a class="bdt-advanced-icon-box-readmore bdt-display-inline-block mt-3" href="#">
-                                <span class="bdt-button-icon-align-right">
-                                    <i aria-hidden="true" class="fa-fw fas fa-arrow-right"></i>
-                                </span>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-md-3">
-                        <div class="icon-box-card text-center p-4">
-                            <img src="/images/icons/canales_mundo.svg" alt="Canales del Mundo" class="mb-3" width="64">
-                            <h5>Canales del Mundo</h5>
-                            <p>Explorá canales de EE.UU., Europa, Latinoamérica y Asia.</p>
-                            <a class="bdt-advanced-icon-box-readmore bdt-display-inline-block mt-3" href="#">
-                                <span class="bdt-button-icon-align-right">
-                                    <i aria-hidden="true" class="fa-fw fas fa-arrow-right"></i>
-                                </span>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-md-3">
-                        <div class="icon-box-card text-center p-4">
-                            <img src="/images/icons/alta_calidad.svg" alt="Calidad Garantizada" class="mb-3" width="64">
-                            <h5>Calidad Garantizada</h5>
-                            <p>Visualización fluida en calidad 4K/FHD con 100% uptime.</p>
-                            <a class="bdt-advanced-icon-box-readmore bdt-display-inline-block mt-3" href="#">
-                                <span class="bdt-button-icon-align-right">
-                                    <i aria-hidden="true" class="fa-fw fas fa-arrow-right"></i>
-                                </span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-
-            </div>
-        </section>
-
-
-        <section class="section" data-anchor="servicios" itemscope itemtype="https://schema.org/Service">
-            <div class="container text-center">
-                <h2 class="mb-3" itemprop="name">Compatibilidad total</h2>
-                <p class="mb-4" itemprop="description">
-                    Funciona en Android, iOS, Smart TVs, Roku, Fire Stick, Chromecast, Windows y Mac.
-                </p>
-                <img src="/images/logos-dispositivos.png"
-                    alt="Dispositivos compatibles: Android, iOS, Smart TVs, Roku, Fire Stick, Chromecast, Windows y Mac"
-                    class="img-fluid" width="700" loading="lazy" itemprop="image">
-            </div>
-        </section>
-
+        <!-- Precios -->
         <section id="precios" class="section text-center" data-anchor="planes">
             <div class="container">
                 <h2 class="mb-4">Planes IPTV</h2>
@@ -235,6 +155,86 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </section>
+
+        <!-- Compatibilidad -->
+        <section class="section" data-anchor="compatibilidad" itemscope itemtype="https://schema.org/Service">
+            <div class="container text-center">
+                <h2 class="mb-3" itemprop="name">Compatibilidad total</h2>
+                <p class="mb-4" itemprop="description">
+                    Funciona en Android, iOS, Smart TVs, Roku, Fire Stick, Chromecast, Windows y Mac.
+                </p>
+                <img src="/images/logos-dispositivos.png"
+                    alt="Dispositivos compatibles: Android, iOS, Smart TVs, Roku, Fire Stick, Chromecast, Windows y Mac"
+                    class="img-fluid" width="700" loading="lazy" itemprop="image">
+            </div>
+        </section>
+
+        <section class="section" data-anchor="oferta">
+            <div class="container text-center">
+                <div class="row justify-content-center mb-5">
+                    <div class="col-lg-10">
+                        <h2 class="mb-3">Conectate al futuro del entretenimiento</h2>
+                        <p class="lead">Disfrutá más de 35,000 películas, eventos en vivo, deportes y contenido
+                            exclusivo de tus
+                            plataformas favoritas. <br>Todo en calidad 4K, FHD, HD o SD.</p>
+                    </div>
+                </div>
+
+                <div class="row g-4">
+                    <div class="col-sm-6 col-md-3">
+                        <div class="icon-box-card text-center p-4">
+                            <img src="/images/icons/peliculas_series.svg" alt="Películas y Series" class="mb-3"
+                                width="64">
+                            <h5>Películas y Series</h5>
+                            <p>Estrenos y clásicos al instante en cualquier dispositivo.</p>
+                            <a class="bdt-advanced-icon-box-readmore bdt-display-inline-block mt-3" href="#">
+                                <span class="bdt-button-icon-align-right">
+                                    <i aria-hidden="true" class="fa-fw fas fa-arrow-right"></i>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-3">
+                        <div class="icon-box-card text-center p-4">
+                            <img src="/images/icons/eventos_en_vivo.svg" alt="Eventos en Vivo" class="mb-3" width="64">
+                            <h5>Eventos en Vivo</h5>
+                            <p>Accedé a eventos deportivos, conciertos y más sin cortes.</p>
+                            <a class="bdt-advanced-icon-box-readmore bdt-display-inline-block mt-3" href="#">
+                                <span class="bdt-button-icon-align-right">
+                                    <i aria-hidden="true" class="fa-fw fas fa-arrow-right"></i>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-3">
+                        <div class="icon-box-card text-center p-4">
+                            <img src="/images/icons/canales_mundo.svg" alt="Canales del Mundo" class="mb-3" width="64">
+                            <h5>Canales del Mundo</h5>
+                            <p>Explorá canales de EE.UU., Europa, Latinoamérica y Asia.</p>
+                            <a class="bdt-advanced-icon-box-readmore bdt-display-inline-block mt-3" href="#">
+                                <span class="bdt-button-icon-align-right">
+                                    <i aria-hidden="true" class="fa-fw fas fa-arrow-right"></i>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-3">
+                        <div class="icon-box-card text-center p-4">
+                            <img src="/images/icons/alta_calidad.svg" alt="Calidad Garantizada" class="mb-3" width="64">
+                            <h5>Calidad Garantizada</h5>
+                            <p>Visualización fluida en calidad 4K/FHD con 100% uptime.</p>
+                            <a class="bdt-advanced-icon-box-readmore bdt-display-inline-block mt-3" href="#">
+                                <span class="bdt-button-icon-align-right">
+                                    <i aria-hidden="true" class="fa-fw fas fa-arrow-right"></i>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+
             </div>
         </section>
 
@@ -401,7 +401,20 @@
             menu: '#menu',
             autoScrolling: true,
             navigation: true,
-            scrollingSpeed: 700
+            scrollingSpeed: 700,
+            onLeave: function (origin, destination, direction) {
+                // Elimina 'active' de todos los enlaces del menú
+                document.querySelectorAll('#menu .nav-link').forEach(link => {
+                    link.classList.remove('active');
+                });
+
+                // Agrega 'active' al enlace correspondiente
+                const anchor = destination.anchor;
+                const activeLink = document.querySelector(`#menu .nav-link[href="#${anchor}"]`);
+                if (activeLink) {
+                    activeLink.classList.add('active');
+                }
+            }
         });
     </script>
 

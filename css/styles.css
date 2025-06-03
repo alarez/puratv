@@ -90,6 +90,13 @@ body.fp-viewing-inicio nav {
     color: var(--color-primary);
 }
 
+#menu .nav-link.active {
+    font-weight: bold;
+    color: #F6B900 !important;
+    /* Amarillo PuraTV o el que gustes */
+    text-decoration: underline;
+}
+
 /* ===== END MENU ===== */
 
 .container h1,
@@ -209,7 +216,8 @@ body.fp-viewing-inicio nav {
 }
 
 .card-header {
-    border-radius: 0 !important;
+    border-top-left-radius: 10px !important;
+    border-top-right-radius: 10px !important;
     padding: 20px 0;
 }
 
@@ -305,6 +313,7 @@ body.fp-viewing-inicio nav {
     color: var(--color-text-dark);
     transition: all 0.3s ease-in-out;
     padding: 0;
+    border: 0;
 }
 
 .not-central {
