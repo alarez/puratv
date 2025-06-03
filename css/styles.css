@@ -71,26 +71,27 @@ a:hover {
     background-color: white !important;
 }
 
-
-
-nav.navbar {
-    transition: background-color 0.3s, transform 0.3s;
+/* ===== MENU ===== */
+.navbar {
+    background-color: var(--color-bg-dark);
+    color: var(--color-bg-light);
 }
 
-nav.navbar.at-top {
-    background-color: transparent;
+body.fp-viewing-inicio nav {
+    background-color: transparent !important;
 }
 
-nav.navbar.scroll-up {
-    background-color: #ffffff;
-    transform: translateY(0);
+.nav-link {
+    color: var(--color-bg-light);
 }
 
-nav.navbar.scroll-down {
-    transform: translateY(-100%);
+.nav-link:focus,
+.nav-link:hover {
+    color: var(--color-primary);
 }
 
 /* ===== END MENU ===== */
+
 .container h1,
 .container h2 {
     margin-bottom: 20px;
@@ -417,25 +418,76 @@ nav.navbar.scroll-down {
     font-size: 18px;
 }
 
-/* Estado inicial */
-.headroom {
-    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+
+/* FAQs */
+#faqAccordion {
+    width: 100%;
+    max-width: 700px;
+    min-width: 700px;
+    overflow-x: hidden;
+    flex-grow: 1;
 }
 
-/* Cuando está en la parte superior */
-.headroom--top {
-    background-color: transparent !important;
+.accordion,
+.accordion-item,
+.accordion-button {
+    width: 100%;
+    border-radius: 0;
+}
+
+.accordion-item {
+    margin-bottom: 20px !important;
+    width: 100%;
+    display: block;
+    border: 0;
+    border-radius: 0 !important;
+}
+
+.accordion-item:first-of-type {
+    border-top-left-radius: 0 !important;
+    border-top-right-radius: 0 !important;
+}
+
+.accordion-item:first-of-type .accordion-button {
+    border-top-left-radius: 0 !important;
+    border-top-right-radius: 0 !important;
+}
+
+.accordion-item:last-of-type .accordion-button.collapsed {
+    border-bottom-left-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+}
+
+.accordion-item:last-of-type .accordion-button {
+    border-top-left-radius: 0 !important;
+    border-top-right-radius: 0 !important;
+}
+
+.accordion-header {
+    background-color: var(--color-bg-dark) !important;
+    color: var(--color-primary) !important;
+    border: 0;
+    margin-bottom: 0 !important;
+}
+
+.accordion-header button {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.accordion-body {
+    text-align: left !important;
+    width: 100%;
+    word-wrap: break-word;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+    border: 0;
+}
+
+.accordion-button:not(.collapsed) {
+    color: var(--color-bg-dark);
+    background-color: var(--color-bg-light);
+    border: 0;
     box-shadow: none;
-}
-
-/* Cuando hace scroll hacia abajo */
-.headroom--unpinned {
-    transform: translateY(-100%);
-}
-
-/* Cuando hace scroll hacia arriba */
-.headroom--pinned {
-    transform: translateY(0);
-    background-color: white !important;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
