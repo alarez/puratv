@@ -26,7 +26,7 @@ h6,
 p,
 a,
 button {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Rubik', sans-serif;
 }
 
 a {
@@ -309,6 +309,53 @@ body.fp-viewing-inicio nav {
     color: var(--color-text-light);
 }
 
+/* ===== BOOTSTRAP BUTTON OVERRIDES ===== */
+.btn-primary {
+    background-color: var(--color-primary) !important;
+    border-color: var(--color-primary) !important;
+    color: var(--color-text-dark) !important;
+    border-radius: 50px;
+    display: inline-block;
+    width: auto;
+    padding: 0.5rem 1.5rem;
+}
+
+
+.btn-primary:hover {
+    background-color: var(--color-bg-dark) !important;
+    border-color: var(--color-primary-dark) !important;
+    color: var(--color-primary) !important;
+    text-decoration: none;
+}
+
+.btn-outline-primary {
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--color-primary);
+    color: var(--color-text-dark);
+}
+
+.btn-secundary {
+    background-color: var(--color-bg-light) !important;
+    border-color: var(--color-primary) !important;
+    color: var(--color-text-dark) !important;
+    border-radius: 50px !important;
+    display: inline-block;
+    width: auto;
+    padding: 0.5rem 1.5rem;
+}
+
+.btn-secundary:hover {
+    background-color: var(--color-bg-dark) !important;
+    border-color: var(--color-primary) !important;
+    color: var(--color-primary) !important;
+    text-decoration: none;
+}
+
+
 /* ===== SECCIÓN PRECIOS ===== */
 #precios .card {
     border-radius: 10px;
@@ -343,35 +390,6 @@ body.fp-viewing-inicio nav {
 
 #precios .list-unstyled li {
     color: var(--color-muted);
-}
-
-/* ===== BOOTSTRAP BUTTON OVERRIDES ===== */
-.btn-primary {
-    background-color: var(--color-primary) !important;
-    border-color: var(--color-primary) !important;
-    color: var(--color-text-dark) !important;
-    border-radius: 50px;
-    display: inline-block;
-    width: auto;
-    padding: 0.5rem 1.5rem;
-}
-
-
-.btn-primary:hover {
-    background-color: var(--color-bg-light) !important;
-    border-color: var(--color-primary-dark) !important;
-    color: var(--color-text-dark) !important;
-    text-decoration: none;
-}
-
-.btn-outline-primary {
-    border-color: var(--color-primary);
-    color: var(--color-primary);
-}
-
-.btn-outline-primary:hover {
-    background-color: var(--color-primary);
-    color: var(--color-text-dark);
 }
 
 .popular {
@@ -517,8 +535,8 @@ body.fp-viewing-inicio nav {
     /* aligned with circles */
     left: 0;
     right: 0;
-    height: 2px;
-    background-color: #ddd;
+    height: 1px;
+    background-color: var(--color-primary);
     z-index: 0;
 }
 

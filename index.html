@@ -24,7 +24,68 @@
       "contactType": "Customer Support",
       "areaServed": "CR",
       "availableLanguage": "Spanish"
+    },
+    "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Cómo funciona IPTV?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "IPTV funciona mediante una conexión a Internet que te permite acceder a canales en vivo, películas y series a través de una aplicación o dispositivo compatible."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cuánto tiempo tarda el proceso del inicio?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Una vez realizado el pago, en menos de una hora recibirás tus credenciales y la guía para empezar a usar el servicio."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué dispositivos son compatibles?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Podés usar IPTV en Smart TVs, Android, iOS, Roku, Fire Stick, Chromecast, Windows y Mac."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cómo descargo la aplicación que necesito para ver IPTV?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Te indicaremos la mejor app según tu dispositivo. También te enviaremos un manual para que la descargues y configures fácilmente."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué métodos de pago son aceptados?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Aceptamos SINPE móvil, transferencia bancaria y pago con tarjeta."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Ofrecen alguna prueba gratuita?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí, ofrecemos una prueba gratuita de 24 horas para que probés el servicio antes de contratarlo."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Estoy fuera de Costa Rica, ¿el servicio funcionará?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí, el servicio funciona en cualquier parte del mundo con conexión a internet."
+      }
     }
+  ]
+}
   }
   </script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -45,10 +106,12 @@
 <body>
 
     <!-- Sticky Menu -->
-    <nav class="navbar navbar-expand-md fixed-top">
+    <nav class="navbar navbar-expand-md fixed-top" aria-label="Menú principal">
         <div class="container d-flex justify-content-between align-items-center">
             <a class="navbar-brand" href="#inicio">
-                <img src="/images/logo-Puratv-amarillo.png" alt="PuraTV" height="60">
+                <img src="/images/logo-Puratv-amarillo.png"
+                    alt="Logo de PuraTV.digital con un tucán estilizado y colores amarillo, naranja y rojo en el pico, acompañado del nombre PuraTV.digital"
+                    height="60">
             </a>
             <ul id="menu" class="navbar-nav flex-row gap-3 ms-auto">
                 <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
@@ -72,8 +135,9 @@
                         <p class="lead">Disfrutá más de 25,000 canales y 40,000 películas y series desde cualquier
                             dispositivo.
                         </p>
-                        <div>
-                            <a href="#planes" class="btn btn-primary">Suscribite ahora</a>
+                        <div class="d-flex flex-wrap gap-3">
+                            <a href="#planes" class="btn btn-secundary">Suscribite ahora</a>
+                            <a href="#planes" class="btn btn-primary">Demo Gratis</a>
                         </div>
 
                     </div>
@@ -85,16 +149,15 @@
         <section id="precios" class="section text-center" data-anchor="planes">
             <div class="container">
                 <h2 class="mb-4">Planes IPTV</h2>
-                <h5 class="mb-5">Disfruta de más de 25,000 canales en vivo y 40,000 películas y series con calidad
-                    4K/HD/SD.<br>
-                    Compatible con todos tus dispositivos.</h5>
+                <h3 class="mb-5">Disfruta de más de 25,000 canales en vivo y 40,000 películas y series con calidad
+                    4K/HD/SD. Compatible con todos tus dispositivos.</h3>
 
                 <div class="row row-cols-1 row-cols-md-3 g-4">
                     <!-- Plan 1 Mes -->
                     <div class="col not-central">
                         <div class="card h-100 shadow-sm">
                             <div class="card-header bg-dark text-white">
-                                <h3 class="my-0">1 MES</h3>
+                                <h4 class="my-0">1 MES</h4>
                                 <p>3 Dispositivos simultáneos</p>
                             </div>
                             <div class="card-body">
@@ -106,7 +169,7 @@
                                     <li><i class="fas fa-check"></i> Compatible con todos los dispositivos</li>
                                     <li><i class="fas fa-check"></i> Calidad 4K / FHD / HD / SD</li>
                                 </ul>
-                                <h2 class="card-title pricing-card-title mb-3">₡5,000</h2>
+                                <h5 class="card-title pricing-card-title mb-3">₡5,000</h5>
                                 <a href="#" class="btn btn-primary w-100">Suscribirse</a>
                             </div>
                         </div>
@@ -117,7 +180,7 @@
                         <div class="card h-100 shadow-sm popular">
                             <div class="ribbon"><span>POPULAR</span></div>
                             <div class="card-header bg-dark text-white">
-                                <h3 class="my-0">3 MESES</h3>
+                                <h4 class="my-0">3 MESES</h4>
                                 <p>3 Dispositivos simultáneos</p>
                             </div>
                             <div class="card-body">
@@ -129,7 +192,7 @@
                                     <li><i class="fas fa-check"></i> Compatible con todos los dispositivos</li>
                                     <li><i class="fas fa-check"></i> Calidad 4K / FHD / HD / SD</li>
                                 </ul>
-                                <h2 class="card-title pricing-card-title mb-3">₡12,000</h2>
+                                <h5 class="card-title pricing-card-title mb-3">₡12,000</h5>
                                 <a href="#" class="btn btn-primary w-100">Suscribirse</a>
                             </div>
                         </div>
@@ -140,7 +203,7 @@
                     <div class="col not-central">
                         <div class="card h-100 shadow-sm">
                             <div class="card-header bg-dark text-white">
-                                <h3 class="my-0">1 AÑO</h3>
+                                <h4 class="my-0">1 AÑO</h4>
                                 <p>3 Dispositivos simultáneos</p>
                             </div>
                             <div class="card-body">
@@ -152,7 +215,7 @@
                                     <li><i class="fas fa-check"></i> Compatible con todos los dispositivos</li>
                                     <li><i class="fas fa-check"></i> Calidad 4K / FHD / HD / SD</li>
                                 </ul>
-                                <h2 class="card-title pricing-card-title mb-3">₡45,000</h2>
+                                <h5 class="card-title pricing-card-title mb-3">₡45,000</h5>
                                 <a href="#" class="btn btn-primary w-100">Suscribirse</a>
                             </div>
                         </div>
@@ -170,7 +233,8 @@
                 </p>
                 <img src="/images/logos-dispositivos.png"
                     alt="Dispositivos compatibles: Android, iOS, Smart TVs, Roku, Fire Stick, Chromecast, Windows y Mac"
-                    class="img-fluid" width="700" loading="lazy" itemprop="image">
+                    class="img-fluid" width="700" loading="lazy" itemprop="image"
+                    alt="Logos de plataformas compatibles con IPTV, incluyendo Fire TV Stick, Samsung Smart TV, Android TV, Apple, Chromecast, Roku, Android, IPTV Smarters Pro, Tizen de Samsung, WebPlayer, LG Smart TV y Windows.">
             </div>
         </section>
 
@@ -180,55 +244,63 @@
                     <div class="col-lg-10">
                         <h2 class="mb-3">Conectate al futuro del entretenimiento</h2>
                         <p class="lead">Disfrutá más de 35,000 películas, eventos en vivo, deportes y contenido
-                            exclusivo de tus
-                            plataformas favoritas. <br>Todo en calidad 4K, FHD, HD o SD.</p>
+                            exclusivo de tus plataformas favoritas. Todo en calidad 4K, FHD, HD o SD.</p>
                     </div>
                 </div>
 
                 <div class="row g-4">
-                    <div class="col-sm-6 col-md-3">
+                    <div class="col-sm-12 col-md-3 d-flex">
                         <div class="icon-box-card text-center p-4">
-                            <img src="/images/icons/peliculas_series.svg" alt="Películas y Series" class="mb-3"
-                                width="64">
-                            <h5>Películas y Series</h5>
+                            <img src="/images/icons/peliculas_series.svg"
+                                alt="Icono de pantalla de cine que representa películas y series disponibles en la plataforma."
+                                class="mb-3" width="64">
+                            <h3>Películas y Series</h3>
                             <p>Estrenos y clásicos al instante en cualquier dispositivo.</p>
-                            <a class="bdt-advanced-icon-box-readmore bdt-display-inline-block mt-3" href="#">
+                            <a class="bdt-advanced-icon-box-readmore bdt-display-inline-block mt-3 mt-auto" href="#">
+                                <span class="visually-hidden">Ver más sobre esta sección</span>
                                 <span class="bdt-button-icon-align-right">
                                     <i aria-hidden="true" class="fa-fw fas fa-arrow-right"></i>
                                 </span>
                             </a>
                         </div>
                     </div>
-                    <div class="col-sm-6 col-md-3">
+                    <div class="col-sm-12 col-md-3 d-flex">
                         <div class="icon-box-card text-center p-4">
-                            <img src="/images/icons/eventos_en_vivo.svg" alt="Eventos en Vivo" class="mb-3" width="64">
-                            <h5>Eventos en Vivo</h5>
+                            <img src="/images/icons/eventos_en_vivo.svg"
+                                alt="Icono de señal en vivo que indica disponibilidad de eventos deportivos, conciertos y transmisiones en directo."
+                                class="mb-3" width="64">
+                            <h3>Eventos en Vivo</h3>
                             <p>Accedé a eventos deportivos, conciertos y más sin cortes.</p>
-                            <a class="bdt-advanced-icon-box-readmore bdt-display-inline-block mt-3" href="#">
+                            <a class="bdt-advanced-icon-box-readmore bdt-display-inline-block mt-3 mt-auto" href="#">
                                 <span class="bdt-button-icon-align-right">
                                     <i aria-hidden="true" class="fa-fw fas fa-arrow-right"></i>
                                 </span>
                             </a>
                         </div>
                     </div>
-                    <div class="col-sm-6 col-md-3">
+                    <div class="col-sm-12 col-md-3 d-flex">
                         <div class="icon-box-card text-center p-4">
-                            <img src="/images/icons/canales_mundo.svg" alt="Canales del Mundo" class="mb-3" width="64">
-                            <h5>Canales del Mundo</h5>
+                            <img src="/images/icons/canales_mundo.svg"
+                                alt="“Icono de globo terráqueo que simboliza acceso a canales de televisión de todo el mundo."
+                                class="mb-3" width="64">
+                            <h3>Canales del Mundo</h3>
                             <p>Explorá canales de EE.UU., Europa, Latinoamérica y Asia.</p>
-                            <a class="bdt-advanced-icon-box-readmore bdt-display-inline-block mt-3" href="#">
+                            <a class="bdt-advanced-icon-box-readmore bdt-display-inline-block mt-3 mt-auto" href="#">
                                 <span class="bdt-button-icon-align-right">
                                     <i aria-hidden="true" class="fa-fw fas fa-arrow-right"></i>
                                 </span>
                             </a>
                         </div>
                     </div>
-                    <div class="col-sm-6 col-md-3">
+                    <div class="col-sm-12 col-md-3 d-flex">
                         <div class="icon-box-card text-center p-4">
-                            <img src="/images/icons/alta_calidad.svg" alt="Calidad Garantizada" class="mb-3" width="64">
-                            <h5>Calidad Garantizada</h5>
+                            <img src="/images/icons/alta_calidad.svg"
+                                alt="Icono que representa transmisión de contenido en alta calidad, incluyendo 4K, Full HD y HD"
+                                class="mb-3" width="64">
+                            <h3>Calidad Garantizada</h3>
                             <p>Visualización fluida en calidad 4K/FHD con 100% uptime.</p>
-                            <a class="bdt-advanced-icon-box-readmore bdt-display-inline-block mt-3" href="#">
+                            <a class="bdt-advanced-icon-box-readmore bdt-display-inline-block mt-3 mt-auto" href="#">
+                                <span class="visually-hidden">Ver más sobre esta sección</span>
                                 <span class="bdt-button-icon-align-right">
                                     <i aria-hidden="true" class="fa-fw fas fa-arrow-right"></i>
                                 </span>
@@ -236,44 +308,75 @@
                         </div>
                     </div>
                 </div>
-
-
             </div>
         </section>
 
-        <section class="section" data-anchor="como-funciona">
+        <section class="section py-5" data-anchor="como-funciona">
             <div class="container text-center">
-                <h2 class="mb-5">¿Cómo funciona?</h2>
-
-                <div class="timeline-horizontal d-flex justify-content-between position-relative">
-
-                    <div class="step text-center">
-                        <div class="circle-number">1</div>
-                        <p class="mt-3">Contáctanos vía WhatsApp.</p>
+                <div class="row justify-content-center mb-5">
+                    <div class="col-lg-8">
+                        <h2 class="mb-3">¿Cómo funciona?</h2>
+                        <p class="lead">Empezá en minutos. Nuestro proceso es fácil, rápido y sin complicaciones.</p>
                     </div>
-
-                    <div class="step text-center">
-                        <div class="circle-number">2</div>
-                        <p class="mt-3">Elegí tu plan y pagá por SINPE, transferencia o tarjeta.</p>
-                    </div>
-
-                    <div class="step text-center">
-                        <div class="circle-number">3</div>
-                        <p class="mt-3">Recibí tus credenciales y manual de instalación.</p>
-                    </div>
-
                 </div>
 
-                <p class="fw-bold text-center mt-5">¡Prueba gratuita por 24 horas disponible!</p>
+                <div class="row g-4">
+                    <div class="col-md-4 d-flex">
+                        <div class="card border-0 shadow-sm flex-fill text-center p-4">
+                            <div class="mb-3">
+                                <div class="rounded-circle bg-warning text-white d-inline-flex align-items-center justify-content-center"
+                                    style="width: 60px; height: 60px; font-size: 1.5rem; font-weight: bold;">
+                                    1
+                                </div>
+                            </div>
+                            <h4 class="mb-2">Contáctanos</h4>
+                            <p>Hablá con nuestro equipo vía WhatsApp para iniciar el proceso.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 d-flex">
+                        <div class="card border-0 shadow-sm flex-fill text-center p-4">
+                            <div class="mb-3">
+                                <div class="rounded-circle bg-warning text-white d-inline-flex align-items-center justify-content-center"
+                                    style="width: 60px; height: 60px; font-size: 1.5rem; font-weight: bold;">
+                                    2
+                                </div>
+                            </div>
+                            <h4 class="mb-2">Elegí tu plan</h4>
+                            <p>Seleccioná tu plan y pagá con SINPE, transferencia o tarjeta.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 d-flex">
+                        <div class="card border-0 shadow-sm flex-fill text-center p-4">
+                            <div class="mb-3">
+                                <div class="rounded-circle bg-warning text-white d-inline-flex align-items-center justify-content-center"
+                                    style="width: 60px; height: 60px; font-size: 1.5rem; font-weight: bold;">
+                                    3
+                                </div>
+                            </div>
+                            <h4 class="mb-2">Recibí tus credenciales</h4>
+                            <p>Te enviamos usuario, contraseña y manual de instalación en minutos.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row mt-5 justify-content-center">
+                    <div class="col-auto">
+                        <a href="#planes" class="btn btn-primary btn-lg">Probar gratis por 24 horas</a>
+                    </div>
+                </div>
             </div>
         </section>
+
 
 
         <section id="faq-section" class="section" data-anchor="faq">
             <div class="container">
                 <div class="row p-5">
                     <div class="col-lg-4">
-                        <h2 class="mb-4 text-center">Preguntas Frecuentes</h2>
+                        <h2 class="mb-4 text-start">Preguntas Frecuentes</h2>
+                        <p class="text-start">Respondemos tus dudas más comunes</p>
                     </div>
                     <div class="col-lg-8">
                         <div class="accordion" id="faqAccordion">
@@ -398,11 +501,35 @@
         </section>
 
         <section class="section" data-anchor="contacto">
-            <div class="container text-center">
-                <h2>Contacto</h2>
-                <p>📱 WhatsApp: +50600000000</p>
-                <p>🌐 <a href="https://www.puratv.digital">www.puratv.digital</a></p>
-                <p>📧 info@puratv.digital</p>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 text-start">
+                        <h2 id="contact">Contacto</h2>
+                        <p>¿Tenés dudas o necesitás ayuda para comenzar? Nuestro equipo está listo para asistirte por
+                            los medios que
+                            prefieras.</p>
+
+                        <div class="d-flex flex-column gap-3 mt-3" role="group" aria-labelledby="contacto">
+                            <a href="https://wa.me/50600000000" target="_blank" rel="noopener noreferrer"
+                                class="btn btn-primary w-100">
+                                <i class="fab fa-whatsapp me-2" aria-hidden="true"></i>
+                                <span class="visually-hidden">Abrir conversación por WhatsApp</span>
+                                Escribir por WhatsApp
+                            </a>
+                            <a href="mailto:info@puratv.digital" target="_blank" rel="noopener noreferrer"
+                                class="btn btn-secundary w-100">
+                                <i class="fas fa-envelope me-2" aria-hidden="true"></i>
+                                <span class="visually-hidden">Enviar un correo a info@puratv.digital</span>
+                                Enviar correo
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-8">
+                        <img src="images//tv-demo-gratis-24-HORAS.jpg"
+                            alt="Televisor mostrando logotipos de servicios de streaming como Netflix, HBO Max, Disney+, Hulu, STARZ, Paramount+, Peacock, Prime Video, Tubi, Pluto TV y Apple TV, acompañado de un dispositivo Amazon Fire TV Stick. Incluye etiqueta de promoción 'Gratis ₡0 por 24 horas">
+                    </div>
+                </div>
             </div>
         </section>
     </main>
@@ -428,6 +555,7 @@
                 const activeLink = document.querySelector(`#menu .nav-link[href="#${anchor}"]`);
                 if (activeLink) {
                     activeLink.classList.add('active');
+                    activeLink.setAttribute('aria-current', 'page');
                 }
             }
         });
