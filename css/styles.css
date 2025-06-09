@@ -560,3 +560,18 @@ body.fp-viewing-inicio nav {
     font-family: 'Poppins', sans-serif;
     -webkit-text-stroke: 1px #000;
 }
+
+/* Quita el borde azul en elementos enfocados por mouse, pero lo deja accesible al usar teclado */
+section:focus,
+div:focus,
+button:focus,
+a:focus,
+*:focus-visible {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+body,
+html {
+    outline: none !important;
+}
