@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-    // --- Preguntas frecuentes (acordeón manual) ---
+    // Acordeón de preguntas frecuentes
     const questions = document.querySelectorAll('.faq-question');
     questions.forEach(function (question) {
         question.addEventListener('click', function () {
@@ -9,31 +9,30 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
-    // --- Menú responsive Bootstrap ---
     const toggler = document.querySelector(".navbar-toggler");
     const menu = document.getElementById("navbarNavDropdown");
 
-    // Al hacer clic en un enlace, cierra el menú (si está abierto)
+    // Instancia Bootstrap Collapse
+    let bsCollapse = new bootstrap.Collapse(menu, {
+        toggle: false
+    });
+
+    // Cierra el menú al hacer clic en cualquier enlace
     document.querySelectorAll("#navbarNavDropdown .nav-link").forEach(link => {
         link.addEventListener("click", () => {
-            const bsCollapse = bootstrap.Collapse.getInstance(menu);
-            if (bsCollapse && menu.classList.contains('show')) {
+            if (menu.classList.contains('show')) {
                 bsCollapse.hide();
             }
         });
     });
 
-    // Cerrar el menú al hacer clic fuera
-    document.addEventListener("click", function (event) {
-        const isClickInsideMenu = menu.contains(event.target);
-        const isClickOnToggler = toggler.contains(event.target);
-        const isOpen = menu.classList.contains('show');
+    // Cierra el menú al hacer clic fuera
+    document.addEventListener("click", function (e) {
+        const isClickInsideMenu = menu.contains(e.target);
+        const isClickOnToggler = toggler.contains(e.target);
 
-        if (!isClickInsideMenu && !isClickOnToggler && isOpen) {
-            const bsCollapse = bootstrap.Collapse.getInstance(menu);
-            if (bsCollapse) {
-                bsCollapse.hide();
-            }
+        if (!isClickInsideMenu && !isClickOnToggler && menu.classList.contains('show')) {
+            bsCollapse.hide();
         }
     });
 });
