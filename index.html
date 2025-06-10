@@ -656,6 +656,9 @@
                             const target = document.querySelector(hash);
                             if (target) {
                                 e.preventDefault();
+                                // Quitar active de todos y agregar solo al clickeado
+                                document.querySelectorAll('#menu .nav-link').forEach(l => l.classList.remove('active'));
+                                this.classList.add('active');
                                 const navbar = document.querySelector('.navbar.fixed-top');
                                 const navbarHeight = navbar ? navbar.offsetHeight : 0;
                                 const targetTop = target.getBoundingClientRect().top + window.pageYOffset - navbarHeight - 5;
