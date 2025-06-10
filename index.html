@@ -177,7 +177,7 @@
         </section>
 
         <!-- Precios -->
-        <section id="precios" class="section text-center" data-anchor="planes">
+        <section id="precios" class="section text-center precios" data-anchor="planes">
             <div class="container">
                 <h2 class="mb-4">Planes IPTV</h2>
                 <h3 class="mb-5">Disfrutá de más de 25,000 canales en vivo y 40,000 películas y series con calidad
@@ -601,33 +601,81 @@
     <!-- JS dependencies -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.20/fullpage.min.js"></script>
     <script>
-        new fullpage('#fullpage', {
-            licenseKey: 'gplv3-license',
-            anchors: ['inicio', 'planes', 'compatibilidad', 'oferta', 'como-funciona', 'faq', 'contacto'],
-            menu: '#menu',
-            autoScrolling: true,
-            navigation: true,
-            scrollingSpeed: 700,
-            afterLoad: function (origin, destination, direction) {
-                // Elimina la clase 'active' de todos los enlaces
-                document.querySelectorAll('#menu .nav-link').forEach(link => {
-                    link.classList.remove('active');
+        function initFullpage() {
+            if (window.innerWidth >= 992) { // solo en desktop
+                new fullpage('#fullpage', {
+                    licenseKey: 'gplv3-license',
+                    anchors: ['inicio', 'planes', 'compatibilidad', 'oferta', 'como-funciona', 'faq', 'contacto'],
+                    menu: '#menu',
+                    autoScrolling: true,
+                    scrollOverflow: true,
+                    navigation: true,
+                    scrollingSpeed: 700,
+                    afterLoad: function (origin, destination) {
+                        document.querySelectorAll('#menu .nav-link').forEach(link => {
+                            link.classList.remove('active');
+                            link.removeAttribute('aria-current');
+                        });
+                        const anchor = destination.anchor;
+                        const activeLink = document.querySelector(`#menu .nav-link[href="#${anchor}"]`);
+                        if (activeLink) {
+                            activeLink.classList.add('active');
+                            activeLink.setAttribute('aria-current', 'page');
+                        }
+                    }
                 });
+            }
+        }
 
-                // Agrega 'active' al enlace correspondiente
-                const anchor = destination.anchor;
-                const activeLink = document.querySelector(`#menu .nav-link[href="#${anchor}"]`);
-                if (activeLink) {
-                    activeLink.classList.add('active');
-                    activeLink.setAttribute('aria-current', 'page');
+        // --- Fix: IDs dinámicos solo en mobile ---
+        const sectionAnchors = ['inicio', 'planes', 'compatibilidad', 'oferta', 'como-funciona', 'faq', 'contacto'];
+        function updateSectionIds() {
+            sectionAnchors.forEach(anchor => {
+                const section = document.querySelector(`.section[data-anchor="${anchor}"]`);
+                if (section) {
+                    if (window.innerWidth < 992) {
+                        section.id = anchor;
+                    } else {
+                        if (section.id === anchor) section.removeAttribute('id');
+                    }
                 }
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            updateSectionIds();
+            initFullpage();
+
+            // --- Scroll con offset en mobile ---
+            if (window.innerWidth < 992) {
+                document.querySelectorAll('#menu .nav-link').forEach(link => {
+                    link.addEventListener('click', function (e) {
+                        const hash = this.getAttribute('href');
+                        if (hash && hash.startsWith('#')) {
+                            const target = document.querySelector(hash);
+                            if (target) {
+                                e.preventDefault();
+                                const navbar = document.querySelector('.navbar.fixed-top');
+                                const navbarHeight = navbar ? navbar.offsetHeight : 0;
+                                const targetTop = target.getBoundingClientRect().top + window.pageYOffset - navbarHeight - 5;
+                                window.scrollTo({
+                                    top: targetTop,
+                                    behavior: 'smooth'
+                                });
+                            }
+                        }
+                    });
+                });
             }
         });
-        // Remueve clase active en clics manuales antes de que fullPage lo re-aplique correctamente
-        document.querySelectorAll('#menu .nav-link').forEach(link => {
-            link.addEventListener('click', function () {
-                document.querySelectorAll('#menu .nav-link').forEach(el => el.classList.remove('active'));
-            });
+
+        window.addEventListener('resize', function () {
+            updateSectionIds();
+            if (window.innerWidth < 992 && typeof fullpage_api !== 'undefined') {
+                fullpage_api.destroy('all');
+            } else if (window.innerWidth >= 992 && !document.querySelector('#fp-nav')) {
+                initFullpage();
+            }
         });
     </script>
     <script src="/js/navbar-scroll.js"></script>

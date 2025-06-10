@@ -11,6 +11,10 @@
     --color-border-light: #e5e5e5;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 /* ===== GENERAL ===== */
 body {
     font-family: 'Rubik', sans-serif;
@@ -71,10 +75,29 @@ a:hover {
     background-color: white !important;
 }
 
+@media (max-width: 991.98px) {
+    #fullpage {
+        height: auto !important;
+        overflow: visible !important;
+    }
+
+    .section {
+        height: auto !important;
+        min-height: auto !important;
+    }
+
+    html,
+    body {
+        overflow-x: hidden;
+        scroll-behavior: smooth;
+    }
+}
+
 /* ===== MENU ===== */
 .navbar {
     background-color: var(--color-bg-dark);
     color: var(--color-bg-light);
+    z-index: 1001;
 }
 
 body.fp-viewing-inicio nav {
@@ -103,6 +126,7 @@ body.fp-viewing-inicio nav {
 .navbar-toggler {
     background-color: var(--color-primary);
 }
+
 
 @media (max-width: 991.98px) {
     .offcanvas-menu {
@@ -153,6 +177,7 @@ body.fp-viewing-inicio nav {
     body.offcanvas-open {
         overflow: hidden;
     }
+
 }
 
 /* ===== END MENU ===== */
@@ -169,7 +194,7 @@ body.fp-viewing-inicio nav {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    min-height: 100vh;
+    min-height: 100vh !important;
     display: flex;
     align-items: center;
     position: relative;
@@ -412,7 +437,7 @@ body.fp-viewing-inicio nav {
 
 
 /* ===== SECCIÓN PRECIOS ===== */
-#precios .card {
+.precios .card {
     border-radius: 10px;
     background-color: var(--color-bg-light);
     color: var(--color-text-dark);
@@ -425,12 +450,12 @@ body.fp-viewing-inicio nav {
     margin-top: 80px !important;
 }
 
-#precios .card:hover {
+.precios .card:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
 }
 
-#precios .card-header {
+.precios .card-header {
     background-color: transparent;
     text-transform: uppercase;
     color: var(--color-text-dark);
@@ -439,11 +464,11 @@ body.fp-viewing-inicio nav {
     border-top-right-radius: 10px;
 }
 
-#precios .card-title {
+.precios .card-title {
     margin: 25px 0;
 }
 
-#precios .list-unstyled li {
+.precios .list-unstyled li {
     color: var(--color-muted);
 }
 

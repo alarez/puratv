@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-    // Acordeón de preguntas frecuentes
+    // Preguntas frecuentes toggle
     const questions = document.querySelectorAll('.faq-question');
     questions.forEach(function (question) {
         question.addEventListener('click', function () {
@@ -9,30 +9,29 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
+    // Toggle menú móvil
     const toggler = document.querySelector(".navbar-toggler");
     const menu = document.getElementById("navbarNavDropdown");
+    const links = menu.querySelectorAll("a.nav-link");
 
-    // Instancia Bootstrap Collapse
-    let bsCollapse = new bootstrap.Collapse(menu, {
-        toggle: false
+    toggler.addEventListener("click", function () {
+        menu.classList.toggle("show");
+        document.body.classList.toggle("offcanvas-open");
     });
 
-    // Cierra el menú al hacer clic en cualquier enlace
-    document.querySelectorAll("#navbarNavDropdown .nav-link").forEach(link => {
+    // Cierra menú al hacer click en link
+    links.forEach(link => {
         link.addEventListener("click", () => {
-            if (menu.classList.contains('show')) {
-                bsCollapse.hide();
-            }
+            menu.classList.remove("show");
+            document.body.classList.remove("offcanvas-open");
         });
     });
 
-    // Cierra el menú al hacer clic fuera
+    // Cierra al hacer clic fuera
     document.addEventListener("click", function (e) {
-        const isClickInsideMenu = menu.contains(e.target);
-        const isClickOnToggler = toggler.contains(e.target);
-
-        if (!isClickInsideMenu && !isClickOnToggler && menu.classList.contains('show')) {
-            bsCollapse.hide();
+        if (!menu.contains(e.target) && !toggler.contains(e.target)) {
+            menu.classList.remove("show");
+            document.body.classList.remove("offcanvas-open");
         }
     });
 });
