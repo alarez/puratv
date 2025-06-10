@@ -129,24 +129,31 @@
 <body>
 
     <!-- Sticky Menu -->
-    <nav class="navbar navbar-expand-md fixed-top" aria-label="Menú principal">
+    <nav class="navbar navbar-expand-lg fixed-top shadow-sm" aria-label="Menú principal">
         <div class="container d-flex justify-content-between align-items-center">
             <a class="navbar-brand" href="#inicio">
                 <img src="/images/logo-Puratv-amarillo.png"
                     alt="Logo de PuraTV.digital con un tucán estilizado y colores amarillo, naranja y rojo en el pico, acompañado del nombre PuraTV.digital"
                     height="60">
             </a>
-            <ul id="menu" class="navbar-nav flex-row gap-3 ms-auto">
-                <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
-                <li class="nav-item"><a class="nav-link" href="#planes">Planes</a></li>
-                <li class="nav-item"><a class="nav-link" href="#compatibilidad">Dispositivos</a></li>
-                <li class="nav-item"><a class="nav-link" href="#oferta">Oferta</a></li>
-                <li class="nav-item"><a class="nav-link" href="#como-funciona">¿Cómo funciona?</a></li>
-                <li class="nav-item"><a class="nav-link" href="#faq">Preguntas frecuentes</a></li>
-                <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
-            </ul>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="navbar-collapse offcanvas-menu" id="navbarNavDropdown">
+                <ul id="menu" class="navbar-nav ms-auto gap-lg-3 gap-2 text-center">
+                    <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#planes">Planes</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#compatibilidad">Dispositivos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#oferta">Oferta</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#como-funciona">¿Cómo funciona?</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#faq">Preguntas frecuentes</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+                </ul>
+            </div>
         </div>
     </nav>
+
 
     <!-- FullPage content -->
     <main id="fullpage">
