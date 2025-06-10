@@ -219,6 +219,14 @@ body.fp-viewing-inicio nav {
     }
 }
 
+@media (max-width: 767.98px) {
+    @supports (background-image: url('../images/webp/tv-mobile.webp')) {
+        .hero {
+            background-image: url('../images/webp/tv-mobile.webp');
+        }
+    }
+}
+
 .section[data-anchor="oferta"] {
     background-color: var(--color-primary);
     color: var(--color-bg-dark);
