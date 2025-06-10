@@ -532,10 +532,14 @@ body.fp-viewing-inicio nav {
 /* FAQs */
 #faqAccordion {
     width: 100%;
-    max-width: 700px;
-    min-width: 700px;
-    overflow-x: hidden;
     flex-grow: 1;
+}
+
+@media (min-width: 992px) {
+    #faqAccordion {
+        max-width: 700px;
+        min-width: 700px;
+    }
 }
 
 .accordion,
