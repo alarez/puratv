@@ -26,88 +26,114 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 
-    <!-- Schema.org Organization + FAQPage -->
     <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "PuraTVDigital",
-      "url": "https://www.puratv.digital",
-      "logo": "https://www.puratv.digital/logo.png",
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "telephone": "+50686694450",
-        "contactType": "Customer Support",
-        "areaServed": "CR",
-        "availableLanguage": "Spanish"
-      }
-    }
-    </script>
+            {
+              "@context": "https://schema.org",
+              "@graph": [
+                {
+                  "@type": "Organization",
+                  "@id": "https://www.puratv.digital#organization",
+                  "name": "PuraTVDigital",
+                  "url": "https://www.puratv.digital",
+                  "logo": {
+                    "@type": "ImageObject",
+                    "url": "https://www.puratv.digital/logo.png"
+                  },
+                  "contactPoint": {
+                    "@type": "ContactPoint",
+                    "telephone": "+50686694450",
+                    "contactType": "Customer Support",
+                    "areaServed": "CR",
+                    "availableLanguage": "Spanish"
+                  }
+                },
+                {
+                  "@type": "Product",
+                  "@id": "https://www.puratv.digital#product",
+                  "name": "PuraTV Digital - Plan Mensual IPTV",
+                  "image": "https://www.puratv.digital/images/logo-Puratv-amarillo.png",
+                  "description": "Disfrutá de más de 25,000 canales en vivo y 40,000 películas y series con calidad 4K/HD/SD. Compatible con Smart TV, Fire Stick, Android, iOS, Roku y más.",
+                  "sku": "IPTV-001",
+                  "brand": {
+                    "@type": "Brand",
+                    "name": "PuraTV Digital"
+                  },
+                  "offers": {
+                    "@type": "Offer",
+                    "url": "https://www.puratv.digital/#planes",
+                    "priceCurrency": "CRC",
+                    "price": "5000",
+                    "priceValidUntil": "2025-12-31",
+                    "availability": "https://schema.org/InStock",
+                    "itemCondition": "https://schema.org/NewCondition"
+                  }
+                },
+                {
+                  "@type": "FAQPage",
+                  "@id": "https://www.puratv.digital#faq",
+                  "mainEntity": [
+                    {
+                      "@type": "Question",
+                      "name": "¿Cómo funciona IPTV?",
+                      "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "IPTV funciona mediante una conexión a Internet que te permite acceder a canales en vivo, películas y series a través de una aplicación o dispositivo compatible."
+                      }
+                    },
+                    {
+                      "@type": "Question",
+                      "name": "¿Cuánto tiempo tarda el proceso del inicio?",
+                      "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Una vez realizado el pago, en menos de una hora recibirás tus credenciales y la guía para empezar a usar el servicio."
+                      }
+                    },
+                    {
+                      "@type": "Question",
+                      "name": "¿Qué dispositivos son compatibles?",
+                      "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Podés usar IPTV en Smart TVs, Android, iOS, Roku, Fire Stick, Chromecast, Windows y Mac."
+                      }
+                    },
+                    {
+                      "@type": "Question",
+                      "name": "¿Cómo descargo la aplicación que necesito para ver IPTV?",
+                      "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Te indicaremos la mejor app según tu dispositivo. También te enviaremos un manual para que la descargues y configures fácilmente."
+                      }
+                    },
+                    {
+                      "@type": "Question",
+                      "name": "¿Qué métodos de pago son aceptados?",
+                      "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Aceptamos SINPE móvil, transferencia bancaria y pago con tarjeta."
+                      }
+                    },
+                    {
+                      "@type": "Question",
+                      "name": "¿Ofrecen alguna prueba gratuita?",
+                      "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Sí, ofrecemos una prueba gratuita de 24 horas para que probés el servicio antes de contratarlo."
+                      }
+                    },
+                    {
+                      "@type": "Question",
+                      "name": "Estoy fuera de Costa Rica, ¿el servicio funcionará?",
+                      "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Sí, el servicio funciona en cualquier parte del mundo con conexión a internet."
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+        </script>
 
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "¿Cómo funciona IPTV?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "IPTV funciona mediante una conexión a Internet que te permite acceder a canales en vivo, películas y series a través de una aplicación o dispositivo compatible."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "¿Cuánto tiempo tarda el proceso del inicio?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Una vez realizado el pago, en menos de una hora recibirás tus credenciales y la guía para empezar a usar el servicio."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "¿Qué dispositivos son compatibles?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Podés usar IPTV en Smart TVs, Android, iOS, Roku, Fire Stick, Chromecast, Windows y Mac."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "¿Cómo descargo la aplicación que necesito para ver IPTV?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Te indicaremos la mejor app según tu dispositivo. También te enviaremos un manual para que la descargues y configures fácilmente."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "¿Qué métodos de pago son aceptados?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Aceptamos SINPE móvil, transferencia bancaria y pago con tarjeta."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "¿Ofrecen alguna prueba gratuita?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Sí, ofrecemos una prueba gratuita de 24 horas para que probés el servicio antes de contratarlo."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Estoy fuera de Costa Rica, ¿el servicio funcionará?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Sí, el servicio funciona en cualquier parte del mundo con conexión a internet."
-          }
-        }
-      ]
-    }
-    </script>
 
 
     <!-- Google Fonts: preload y carga asíncrona -->
