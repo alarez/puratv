@@ -727,6 +727,16 @@
                             activeLink.classList.add('active');
                             activeLink.setAttribute('aria-current', 'page');
                         }
+
+                        //  Verificamos que gtag esté disponible antes de usarlo
+                        if (typeof gtag === 'function') {
+                            gtag('event', 'page_view', {
+                                page_path: '/' + anchor,
+                                page_title: document.title
+                            });
+                        } else {
+                            console.warn('gtag no está definido todavía');
+                        }
                     }
                 });
             }
