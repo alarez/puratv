@@ -461,6 +461,16 @@ body.fp-viewing-inicio nav {
     text-decoration: none;
 }
 
+.img-btn {
+
+    margin: 25px;
+    display: block;
+
+    img {
+        border-radius: 10px;
+    }
+}
+
 
 /* ===== SECCIÓN PRECIOS ===== */
 .precios .card {
