@@ -1,0 +1,102 @@
+.controls {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+button {
+    background: #f9b233;
+    color: #111;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.2s;
+}
+
+button:hover {
+    background: #ffcc4d;
+}
+
+.game {
+    .card {
+        padding: 5px;
+        margin-top: 0;
+    }
+}
+
+.team {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex: 1;
+}
+
+.team img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    border-radius: 5px;
+    background: #fff;
+    padding: 2px;
+}
+
+.vs {
+    font-weight: bold;
+    font-size: 1rem;
+    margin: 0 10px;
+    opacity: 0.8;
+}
+
+.info {
+    text-align: right;
+    min-width: 120px;
+}
+
+.network {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 5px;
+    flex-wrap: wrap;
+}
+
+.network img {
+    width: 40px;
+    height: auto;
+    object-fit: contain;
+    background: #fff;
+    border-radius: 5px;
+    padding: 2px;
+}
+
+.network span {
+    font-size: 0.85rem;
+    opacity: 0.7;
+}
+
+@media (max-width: 600px) {
+    .game {
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    .info {
+        text-align: left;
+        margin-top: 8px;
+    }
+}
+
+.network-logo {
+    height: 22px;
+    margin: 0 3px;
+    vertical-align: middle;
+    filter: brightness(1.1);
+}
+
+.bg-secondary {
+    background-color: #000000 !important;
+}
