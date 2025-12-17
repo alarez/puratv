@@ -28,8 +28,12 @@
     <loc>https://www.puratv.digital/#contacto</loc>
     <priority>0.6</priority>
   </url>
-    <url>
+  <url>
     <loc>https://www.puratv.digital/nba.html</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.puratv.digital/nfl.html</loc>
     <priority>0.6</priority>
   </url>
 </urlset> 
