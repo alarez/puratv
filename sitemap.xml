@@ -36,4 +36,8 @@
     <loc>https://www.puratv.digital/nfl.html</loc>
     <priority>0.6</priority>
   </url>
+  <url>
+    <loc>https://guia.puratv.digital</loc>
+    <priority>0.6</priority>
+  </url>
 </urlset> 
