@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Calendario Mundial FIFA 2026 en vivo: horarios, canales y resultados | PuraTV Costa Rica</title>
+    <meta name="description"
+        content="Calendario del Mundial FIFA 2026 en Costa Rica: horarios en hora tica, canales para verlo y resultados en vivo, actualizados automáticamente. Mirá todos los partidos en PuraTV Digital." />
+    <meta name="keywords" content="Mundial 2026 Costa Rica, ver Mundial en vivo, calendario Mundial FIFA, canales del Mundial, partidos Mundial hoy, DAZN Mundial, IPTV, PuraTV" />
+    <link rel="canonical" href="https://www.puratv.digital/mundial.html" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Open Graph / Twitter -->
+    <meta property="og:title" content="Calendario Mundial FIFA 2026 en vivo: horarios, canales y resultados | PuraTV" />
+    <meta property="og:description"
+        content="Horarios en hora de Costa Rica, canales y resultados en vivo del Mundial FIFA 2026. Mirá todos los partidos en PuraTV Digital." />
+    <meta property="og:image" content="https://www.puratv.digital/images/og-mundial.jpg" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.puratv.digital/mundial.html" />
+    <meta property="og:locale" content="es_CR" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Calendario Mundial FIFA 2026 en vivo | PuraTV" />
+    <meta name="twitter:description" content="Horarios, canales y resultados en vivo del Mundial FIFA 2026 en Costa Rica." />
+    <meta name="twitter:image" content="https://www.puratv.digital/images/og-mundial.jpg" />
+
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- FontAwesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet" />
+    <!-- Global Styles -->
+    <link rel="stylesheet" href="./css/styles.css?v=20260619" />
+    <link rel="stylesheet" href="./css/nba.css" />
+    <link rel="stylesheet" href="./css/calendar.css?v=20260615" />
+
+    <!-- Schema.org inicial (Mundial) -->
+    <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SportsEvent",
+    "name": "Copa Mundial de la FIFA 2026",
+    "sport": "Soccer",
+    "startDate": "2026-06-11",
+    "endDate": "2026-07-19",
+    "url": "https://www.fifa.com/worldcup/",
+    "organizer": {
+      "@type": "Organization",
+      "name": "PuraTV Digital",
+      "url": "https://www.puratv.digital"
+    }
+  }
+  </script>
+
+    <style>
+        /* Hero más bajo para esta página */
+        .mundial-hero {
+            min-height: 46vh !important;
+            padding-top: 96px !important;
+            padding-bottom: 36px !important;
+        }
+
+        /* Calendario y contacto siempre sobre fondo oscuro (evita la franja amarilla del nth-child) */
+        #mundial-schedule {
+            background-color: #15151b !important;
+            color: #fff !important;
+            min-height: auto !important;
+            padding-top: 48px !important;
+            padding-bottom: 64px !important;
+        }
+
+        section[data-anchor="contacto"] {
+            background-color: #15151b !important;
+            color: #fff !important;
+        }
+
+        section[data-anchor="contacto"] p {
+            color: #cfcfcd !important;
+        }
+
+        .day-heading {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #F9C717;
+            text-align: center;
+            margin: 30px 0 16px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid rgba(255, 255, 255, .12);
+        }
+
+        .match-card {
+            background: #1f1f26;
+            border: 1px solid rgba(255, 255, 255, .08);
+            border-radius: 14px;
+            padding: 16px 18px;
+            height: 100%;
+        }
+
+        .match-top {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 12px;
+        }
+
+        .match-round {
+            display: inline-block;
+            font-size: .68rem;
+            text-transform: uppercase;
+            letter-spacing: .06em;
+            color: #d6d6d4;
+            background: rgba(255, 255, 255, .08);
+            padding: 3px 10px;
+            border-radius: 999px;
+        }
+
+        .status-pill {
+            font-size: .64rem;
+            text-transform: uppercase;
+            letter-spacing: .04em;
+            font-weight: 600;
+            padding: 3px 10px;
+            border-radius: 999px;
+        }
+
+        .status-live {
+            background: #E2362D;
+            color: #fff;
+        }
+
+        .status-final {
+            background: rgba(255, 255, 255, .14);
+            color: #e8e8e6;
+        }
+
+        .match-card.is-live {
+            border-color: rgba(226, 54, 45, .55);
+        }
+
+        .live-note {
+            color: #E2362D;
+            font-weight: 600;
+            font-size: .85rem;
+            margin: -8px 0 20px;
+        }
+
+        .match-score {
+            font-weight: 700;
+            color: #fff;
+            font-size: 1.3rem;
+            flex: 0 0 auto;
+            padding: 0 8px;
+            white-space: nowrap;
+        }
+
+        .match-score span {
+            color: #9a9a98;
+            margin: 0 5px;
+            font-weight: 400;
+        }
+
+        .match-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 8px;
+        }
+
+        .match-team {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            flex: 1;
+            min-width: 0;
+            font-weight: 500;
+            color: #fff;
+        }
+
+        .match-team span {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .match-team img {
+            width: 34px;
+            height: 34px;
+            object-fit: contain;
+            background: #fff;
+            border-radius: 6px;
+            padding: 2px;
+            flex: 0 0 auto;
+        }
+
+        .match-team--away {
+            justify-content: flex-end;
+            text-align: right;
+        }
+
+        .match-time {
+            font-weight: 700;
+            color: #F9C717;
+            font-size: 1.05rem;
+            flex: 0 0 auto;
+            padding: 0 6px;
+        }
+
+        .match-channels {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            margin-top: 14px;
+            padding-top: 12px;
+            border-top: 1px solid rgba(255, 255, 255, .08);
+        }
+
+        .match-channels__label {
+            font-size: .7rem;
+            text-transform: uppercase;
+            letter-spacing: .05em;
+            color: #9a9a98;
+            margin-right: 2px;
+        }
+
+        .ch-pill {
+            font-size: .78rem;
+            font-weight: 500;
+            background: #F9C717;
+            color: #1E1E21;
+            padding: 3px 9px;
+            border-radius: 6px;
+        }
+
+        .channels-all {
+            max-width: 760px;
+            margin: 36px auto 0;
+            background: #1f1f26;
+            border: 1px solid rgba(255, 255, 255, .08);
+            border-radius: 14px;
+            padding: 4px 20px;
+            text-align: left;
+        }
+
+        .channels-all summary {
+            cursor: pointer;
+            list-style: none;
+            font-weight: 600;
+            color: #F9C717;
+            padding: 14px 0;
+            text-align: center;
+        }
+
+        .channels-all summary::-webkit-details-marker {
+            display: none;
+        }
+
+        .channels-all__hint {
+            color: #b9b9b6;
+            font-size: .85rem;
+            margin: 0 0 14px;
+        }
+
+        .channels-all__grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 7px;
+            padding-bottom: 18px;
+        }
+
+        .channels-all .ch-pill {
+            font-size: .74rem;
+        }
+    </style>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://www.puratv.digital/" },
+        { "@type": "ListItem", "position": 2, "name": "Calendario Mundial FIFA 2026", "item": "https://www.puratv.digital/mundial.html" }
+      ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "¿Dónde puedo ver el Mundial FIFA 2026 en Costa Rica?", "acceptedAnswer": { "@type": "Answer", "text": "Podés ver todos los partidos del Mundial FIFA 2026 con PuraTV Digital desde cualquier dispositivo (Smart TV, Android, iOS, Roku y Fire Stick), a través de los canales DAZN Mundial 1, 2, 3 y 4 en HD, SD y RAW." } },
+        { "@type": "Question", "name": "¿En qué canales se transmite el Mundial en PuraTV?", "acceptedAnswer": { "@type": "Answer", "text": "El Mundial se transmite por los canales DAZN Mundial (1, 2, 3 y 4) disponibles en PuraTV. En el calendario, cada partido muestra los canales y abajo está la lista completa con todas las variantes." } },
+        { "@type": "Question", "name": "¿Los horarios del Mundial están en hora de Costa Rica?", "acceptedAnswer": { "@type": "Answer", "text": "Sí. Todos los horarios se muestran en hora de Costa Rica y se actualizan automáticamente cada semana." } },
+        { "@type": "Question", "name": "¿El calendario muestra los resultados en vivo?", "acceptedAnswer": { "@type": "Answer", "text": "Sí. Cada partido muestra la hora si es futuro, el marcador en vivo mientras se juega y el resultado final al terminar. Durante los partidos en vivo, los marcadores se actualizan solos cada minuto." } }
+      ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://www.puratv.digital/#org",
+          "name": "PuraTV Digital",
+          "url": "https://www.puratv.digital/",
+          "logo": "https://www.puratv.digital/images/logo-Puratv-amarillo.png",
+          "areaServed": "CR",
+          "contactPoint": { "@type": "ContactPoint", "telephone": "+50686694450", "contactType": "customer support", "availableLanguage": "Spanish" },
+          "sameAs": [
+            "https://www.instagram.com/puratvdigital/",
+            "https://www.facebook.com/profile.php?id=61577027079725"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://www.puratv.digital/#website",
+          "url": "https://www.puratv.digital/",
+          "name": "PuraTV Digital",
+          "inLanguage": "es-CR",
+          "publisher": { "@id": "https://www.puratv.digital/#org" }
+        },
+        {
+          "@type": "Product",
+          "name": "Planes IPTV PuraTV Digital",
+          "image": "https://www.puratv.digital/images/logo-Puratv-amarillo.png",
+          "description": "IPTV con más de 25,000 canales en vivo y 40,000 películas y series, calidad 4K/HD/SD, para 1, 2 o 3 dispositivos simultáneos.",
+          "brand": { "@type": "Brand", "name": "PuraTV Digital" },
+          "offers": {
+            "@type": "AggregateOffer",
+            "priceCurrency": "CRC",
+            "lowPrice": "5000",
+            "highPrice": "95000",
+            "offerCount": "9",
+            "availability": "https://schema.org/InStock",
+            "offers": [
+              { "@type": "Offer", "name": "1 mes - 1 dispositivo", "price": "5000", "priceCurrency": "CRC", "availability": "https://schema.org/InStock" },
+              { "@type": "Offer", "name": "1 mes - 2 dispositivos", "price": "8000", "priceCurrency": "CRC", "availability": "https://schema.org/InStock" },
+              { "@type": "Offer", "name": "1 mes - 3 dispositivos", "price": "10000", "priceCurrency": "CRC", "availability": "https://schema.org/InStock" },
+              { "@type": "Offer", "name": "3 meses - 1 dispositivo", "price": "12000", "priceCurrency": "CRC", "availability": "https://schema.org/InStock" },
+              { "@type": "Offer", "name": "3 meses - 2 dispositivos", "price": "19000", "priceCurrency": "CRC", "availability": "https://schema.org/InStock" },
+              { "@type": "Offer", "name": "3 meses - 3 dispositivos", "price": "25000", "priceCurrency": "CRC", "availability": "https://schema.org/InStock" },
+              { "@type": "Offer", "name": "1 año - 1 dispositivo", "price": "45000", "priceCurrency": "CRC", "availability": "https://schema.org/InStock" },
+              { "@type": "Offer", "name": "1 año - 2 dispositivos", "price": "72000", "priceCurrency": "CRC", "availability": "https://schema.org/InStock" },
+              { "@type": "Offer", "name": "1 año - 3 dispositivos", "price": "95000", "priceCurrency": "CRC", "availability": "https://schema.org/InStock" }
+            ]
+          }
+        }
+      ]
+    }
+    </script>
+</head>
+
+<body class="bg-dark text-light">
+    <!-- Navbar -->
+        <nav class="navbar navbar-expand-xl fixed-top shadow-sm" aria-label="Menú principal">
+        <div class="container d-flex justify-content-between align-items-center">
+            <a class="navbar-brand" href="/index.html#inicio">
+                <picture>
+                    <source
+                        srcset="/images/webp/logo-Puratv-amarillo-small.webp 120w, /images/webp/logo-Puratv-amarillo.webp 2694w"
+                        sizes="60px" type="image/webp">
+                    <img src="/images/logo-Puratv-amarillo.png"
+                        alt="Logo de PuraTV.digital con un tucán estilizado y colores amarillo, naranja y rojo en el pico, acompañado del nombre PuraTV.digital"
+                        height="60">
+                </picture>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Abrir menú">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="navbar-collapse offcanvas-menu" id="navbarNavDropdown">
+                <ul id="menu" class="navbar-nav ms-auto gap-xl-2 gap-2 text-center">
+                    <li class="nav-item"><a class="nav-link" href="/index.html#inicio">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/index.html#planes">Precios</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="/manuales/" id="manualesMenu">Manuales de instalación</a>
+                        <ul class="dropdown-menu" aria-labelledby="manualesMenu">
+                            <li><a class="dropdown-item" href="/manuales/android-tv/">Android TV</a></li>
+                            <li><a class="dropdown-item" href="/manuales/firestick/">Amazon FireStick</a></li>
+                            <li><a class="dropdown-item" href="/manuales/ios/">iOS (iPhone/iPad)</a></li>
+                            <li><a class="dropdown-item" href="/manuales/android-mobile/">Android (Móvil/Tablet)</a></li>
+                            <li><a class="dropdown-item" href="/manuales/smart-tv/">Smart TV (Samsung/LG)</a></li>
+                            <li><a class="dropdown-item" href="/manuales/roku/">Roku (IPTV Smarters)</a></li>
+                            <li><a class="dropdown-item" href="/manuales/roku-ibo/">Roku (IBO Player)</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="/index.html#oferta">Oferta</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/index.html#como-funciona">¿Cómo funciona?</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/index.html#faq">FAQ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/index.html#contacto">Contacto</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://guia.puratv.digital">Guía TV</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main id="fullpage">
+        <!-- HERO -->
+        <section class="section hero mundial-hero" data-anchor="inicio">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-7 text-start">
+                        <h1 id="pageTitle" class="fw-bold">
+                            Calendario del Mundial FIFA 2026 – Partidos y Canales | PuraTV Digital
+                        </h1>
+                        <p class="lead">
+                            Mirá todos los partidos del Mundial en cualquier dispositivo. Más de 25,000 canales y 40,000 películas y series.
+                        </p>
+                        <div class="d-flex flex-wrap gap-3 mt-3">
+                            <a href="#planes" class="btn btn-secundary">Suscribite ahora</a>
+                            <a href="https://wa.me/50686694450" target="_blank" class="btn btn-primary">
+                                <i class="fab fa-whatsapp me-1"></i> Demo Gratis 24 horas
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SCHEDULE -->
+        <section id="mundial-schedule" class="section text-center" data-anchor="mundial-schedule">
+            <div class="container">
+                <div class="text-center mb-4">
+                    <h2 class="mb-2">⚽ Calendario del Mundial FIFA 2026</h2>
+                    <p class="lead text-warning fw-semibold mb-0" id="weekLabel">Semana actual</p>
+                </div>
+
+                <div class="controls d-flex justify-content-center mb-4 gap-2">
+                    <button id="prevWeek" class="btn btn-secundary">
+                        <i class="fas fa-chevron-left"></i> Semana anterior
+                    </button>
+                    <button id="currentWeek" class="btn btn-primary">
+                        Semana actual
+                    </button>
+                    <button id="nextWeek" class="btn btn-secundary">
+                        Siguiente semana <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+
+                <p id="liveNote" class="live-note" hidden></p>
+
+                <div id="games" class="row gy-4" aria-live="polite" aria-busy="true">
+                    <div class="col-12 text-center">
+                        <div class="spinner-border text-warning" role="status">
+                            <span class="visually-hidden">Cargando...</span>
+                        </div>
+                        <p class="mt-3 text-muted">Cargando partidos del Mundial...</p>
+                    </div>
+                </div>
+
+                <details class="channels-all">
+                    <summary>📺 Ver todos los canales del Mundial en PuraTV (DAZN)</summary>
+                    <p class="channels-all__hint">Buscá cualquiera de estos nombres en tu app para ver los partidos. Tenés versiones en HD, SD y RAW.</p>
+                    <div class="channels-all__grid">
+                        <span class="ch-pill">WC: DAZN MUNDIAL ᴴᴰ</span>
+                        <span class="ch-pill">WC: DAZN MUNDIAL 2 ᴴᴰ</span>
+                        <span class="ch-pill">WC: DAZN MUNDIAL 3 ᴴᴰ</span>
+                        <span class="ch-pill">WC: DAZN MUNDIAL 4 ᴴᴰ</span>
+                        <span class="ch-pill">WC: DAZN MUNDIAL SD</span>
+                        <span class="ch-pill">WC: DAZN MUNDIAL 2 SD</span>
+                        <span class="ch-pill">WC: DAZN MUNDIAL 3 SD</span>
+                        <span class="ch-pill">WC: DAZN MUNDIAL 4 SD</span>
+                        <span class="ch-pill">WC: DAZN MUNDIAL ʰᵉᵛᶜ</span>
+                        <span class="ch-pill">WC: DAZN MUNDIAL ᴿᴬᵂ (ORANGE)</span>
+                        <span class="ch-pill">WC: DAZN MUNDIAL ᴿᴬᵂ RAW</span>
+                        <span class="ch-pill">WC: DAZN MUNDIAL ᴿᴬᵂ [OPCION 2]</span>
+                        <span class="ch-pill">WC: DAZN MUNDIAL 2 ᴿᴬᵂ (ORANGE)</span>
+                        <span class="ch-pill">WC: DAZN MUNDIAL 2 ᴿᴬᵂ</span>
+                        <span class="ch-pill">WC: DAZN MUNDIAL 3 ᴿᴬᵂ (ORANGE)</span>
+                        <span class="ch-pill">WC: DAZN MUNDIAL 3 ᴿᴬᵂ</span>
+                        <span class="ch-pill">WC: DAZN MUNDIAL 4 ᴿᴬᵂ (ORANGE)</span>
+                        <span class="ch-pill">WC: DAZN MUNDIAL 4 ᴿᴬᵂ</span>
+                        <span class="ch-pill">ES| DAZN MUNDIAL</span>
+                    </div>
+                </details>
+            </div>
+        </section>
+
+        <!-- TABLA DE POSICIONES -->
+        <section class="section standings-section" data-anchor="posiciones">
+            <div class="container">
+                <div class="text-center mb-4">
+                    <h2 class="mb-2">📊 Tabla de posiciones por grupo</h2>
+                    <p class="lead week-label mb-0">Fase de grupos · se actualiza con cada partido</p>
+                </div>
+                <div id="standings" class="standings-grid">
+                    <div class="text-center" style="grid-column:1/-1;color:#9a9a98">Cargando posiciones...</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SOBRE EL MUNDIAL -->
+        <section id="precios" class="section text-center precios" data-anchor="planes">
+            <div class="container">
+                <h2 class="mb-4">Mirá el Mundial FIFA 2026 en PuraTV Digital</h2>
+                <h3 class="mb-5">
+                    En <strong>PuraTV Digital</strong> tenés todos los partidos del
+                    <strong>Mundial FIFA 2026</strong>: fase de grupos, eliminatorias y la gran final.
+                    Los encuentros se actualizan automáticamente con horarios locales y se transmiten por los canales
+                    <em>DAZN Mundial 1, 2, 3 y 4</em> (en HD, SD y RAW), disponibles en
+                    <strong>Smart TV, Android, iOS, Roku y Fire Stick</strong>.
+                </h3>
+
+                <!-- Selector de dispositivos simultáneos -->
+                <div class="device-toggle" role="tablist" aria-label="Cantidad de dispositivos simultáneos">
+                    <span class="device-toggle__label">Dispositivos simultáneos</span>
+                    <div class="device-toggle__options">
+                        <button type="button" class="device-toggle__btn is-active" data-devices="1" role="tab" aria-selected="true">1 dispositivo</button>
+                        <button type="button" class="device-toggle__btn" data-devices="2" role="tab" aria-selected="false">2 dispositivos</button>
+                        <button type="button" class="device-toggle__btn" data-devices="3" role="tab" aria-selected="false">3 dispositivos</button>
+                    </div>
+                </div>
+
+                <noscript>
+                    <table class="precios-aeo">
+                        <caption>Precios de los planes PuraTV Digital (colones costarricenses)</caption>
+                        <thead>
+                            <tr><th scope="col">Plan</th><th scope="col">1 dispositivo</th><th scope="col">2 dispositivos</th><th scope="col">3 dispositivos</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><th scope="row">1 mes</th><td>₡5,000</td><td>₡8,000</td><td>₡10,000</td></tr>
+                            <tr><th scope="row">3 meses</th><td>₡12,000</td><td>₡19,000</td><td>₡25,000</td></tr>
+                            <tr><th scope="row">1 año</th><td>₡45,000</td><td>₡72,000</td><td>₡95,000</td></tr>
+                        </tbody>
+                    </table>
+                </noscript>
+
+                <div class="row row-cols-1 row-cols-md-3 g-4">
+                    <!-- Plan 1 Mes -->
+                    <div class="col not-central" itemscope itemtype="https://schema.org/Product">
+                        <meta itemprop="name" content="Plan IPTV 1 Mes" />
+                        <meta itemprop="description"
+                            content="Plan mensual IPTV con 25,000 canales, 40,000 películas y series, 1 dispositivo simultáneo, calidad 4K/HD/SD." />
+                        <div class="card h-100 shadow-sm">
+                            <div class="card-header bg-dark text-white">
+                                <h4 class="my-0">1 MES</h4>
+                                <p>1 dispositivo simultáneo</p>
+                            </div>
+                            <div class="card-body">
+                                <ul class="fa-checklist">
+                                    <li>+25,000 Canales IPTV en vivo</li>
+                                    <li>+40,000 Películas y series</li>
+                                    <li>Contenido PPV</li>
+                                    <li>Compatible con todos los dispositivos</li>
+                                    <li>Calidad 4K / FHD / HD / SD</li>
+                                </ul>
+                                <div itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                                    <meta itemprop="priceCurrency" content="CRC" />
+                                    <meta itemprop="price" content="5000" />
+                                    <meta itemprop="priceValidUntil" content="2027-12-31" />
+                                    <meta itemprop="availability" content="https://schema.org/InStock" />
+                                    <meta itemprop="itemCondition" content="https://schema.org/NewCondition" />
+                                    <h5 class="card-title pricing-card-title mb-3">₡5,000</h5>
+                                </div>
+                                <a href="https://wa.me/50686694450?text=Hola,%20estoy%20interesado%20en%20el%20Plan%20de%201%20mes%20de%20PuraTV%20Digital.%20¿Me%20pueden%20dar%20más%20información?"
+                                    class="btn btn-primary w-100" target="_blank" rel="noopener">Suscribirse</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Plan 3 Meses -->
+                    <div class="col" itemscope itemtype="https://schema.org/Product">
+                        <meta itemprop="name" content="Plan IPTV 3 Meses" />
+                        <meta itemprop="description"
+                            content="Plan IPTV trimestral con 25,000 canales, 40,000 películas y series, 1 dispositivo simultáneo, calidad 4K/HD/SD." />
+                        <div class="card h-100 shadow-sm popular">
+                            <div class="ribbon"><span>POPULAR</span></div>
+                            <div class="card-header bg-dark text-white">
+                                <h4 class="my-0">3 MESES</h4>
+                                <p>1 dispositivo simultáneo</p>
+                            </div>
+                            <div class="card-body">
+                                <ul class="fa-checklist">
+                                    <li>+25,000 Canales IPTV en vivo</li>
+                                    <li>+40,000 Películas y series</li>
+                                    <li>Contenido PPV</li>
+                                    <li>Compatible con todos los dispositivos</li>
+                                    <li>Calidad 4K / FHD / HD / SD</li>
+                                </ul>
+                                <div itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                                    <meta itemprop="priceCurrency" content="CRC" />
+                                    <meta itemprop="price" content="12000" />
+                                    <meta itemprop="priceValidUntil" content="2027-12-31" />
+                                    <meta itemprop="availability" content="https://schema.org/InStock" />
+                                    <meta itemprop="itemCondition" content="https://schema.org/NewCondition" />
+                                    <h5 class="card-title pricing-card-title mb-3">₡12,000</h5>
+                                </div>
+                                <a href="https://wa.me/50686694450?text=Hola,%20estoy%20interesado%20en%20el%20Plan%20de%203%20meses%20de%20PuraTV%20Digital.%20¿Me%20pueden%20dar%20más%20información?"
+                                    class="btn btn-primary w-100" target="_blank" rel="noopener">Suscribirse</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Plan 1 Año -->
+                    <div class="col not-central" itemscope itemtype="https://schema.org/Product">
+                        <meta itemprop="name" content="Plan IPTV 1 Año" />
+                        <meta itemprop="description"
+                            content="Plan IPTV anual con 25,000 canales, 40,000 películas y series, 1 dispositivo simultáneo, calidad 4K/HD/SD." />
+                        <div class="card h-100 shadow-sm">
+                            <div class="card-header bg-dark text-white">
+                                <h4 class="my-0">1 AÑO</h4>
+                                <p>1 dispositivo simultáneo</p>
+                            </div>
+                            <div class="card-body">
+                                <ul class="fa-checklist">
+                                    <li>+25,000 Canales IPTV en vivo</li>
+                                    <li>+40,000 Películas y series</li>
+                                    <li>Contenido PPV</li>
+                                    <li>Compatible con todos los dispositivos</li>
+                                    <li>Calidad 4K / FHD / HD / SD</li>
+                                </ul>
+                                <div itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                                    <meta itemprop="priceCurrency" content="CRC" />
+                                    <meta itemprop="price" content="45000" />
+                                    <meta itemprop="priceValidUntil" content="2027-12-31" />
+                                    <meta itemprop="availability" content="https://schema.org/InStock" />
+                                    <meta itemprop="itemCondition" content="https://schema.org/NewCondition" />
+                                    <h5 class="card-title pricing-card-title mb-3">₡45,000</h5>
+                                </div>
+                                <a href="https://wa.me/50686694450?text=Hola,%20estoy%20interesado%20en%20el%20Plan%20de%201%20año%20de%20PuraTV%20Digital.%20¿Me%20pueden%20dar%20más%20información?"
+                                    class="btn btn-primary w-100" target="_blank" rel="noopener">Suscribirse</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ (SEO/AEO) -->
+        <section class="section" data-anchor="faq-mundial">
+            <div class="container">
+                <h2 class="mb-4">Preguntas frecuentes sobre el Mundial</h2>
+                <div class="cal-faq">
+                    <details open><summary>¿Dónde puedo ver el Mundial FIFA 2026 en Costa Rica?</summary><p>Podés ver todos los partidos del Mundial con PuraTV Digital desde cualquier dispositivo (Smart TV, Android, iOS, Roku y Fire Stick), a través de los canales DAZN Mundial 1, 2, 3 y 4 en HD, SD y RAW.</p></details>
+                    <details><summary>¿En qué canales se transmite el Mundial en PuraTV?</summary><p>El Mundial se transmite por los canales DAZN Mundial (1, 2, 3 y 4). En el calendario cada partido muestra los canales y abajo está la lista completa con todas las variantes.</p></details>
+                    <details><summary>¿Los horarios están en hora de Costa Rica?</summary><p>Sí. Todos los horarios se muestran en hora de Costa Rica y se actualizan automáticamente cada semana.</p></details>
+                    <details><summary>¿El calendario muestra resultados en vivo?</summary><p>Sí. Cada partido muestra la hora si es futuro, el marcador en vivo mientras se juega y el resultado final al terminar. Durante los partidos en vivo, los marcadores se actualizan solos cada minuto.</p></details>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contacto -->
+        <section class="section" data-anchor="contacto">
+            <div class="container">
+                <div class="row flex-column-reverse flex-lg-row align-items-center">
+                    <div class="col-lg-4 text-start">
+                        <h2 id="contact">Contacto</h2>
+                        <p>¿Tenés dudas o necesitás ayuda? Nuestro equipo está listo para asistirte.</p>
+                        <div class="d-flex flex-column gap-3 mt-3">
+                            <a href="https://wa.me/50686694450" target="_blank" rel="noopener noreferrer"
+                                class="btn btn-primary w-100">
+                                <i class="fab fa-whatsapp me-2"></i> Escribir por WhatsApp
+                            </a>
+                            <a href="mailto:puratvdigital@gmail.com" target="_blank" rel="noopener noreferrer"
+                                class="btn btn-secundary w-100">
+                                <i class="fas fa-envelope me-2"></i> Enviar correo
+                            </a>
+                        </div>
+                        <div class="mt-4">
+                            <h5 class="mb-3">Seguinos en redes</h5>
+                            <div class="d-flex gap-3">
+                                <a href="https://www.instagram.com/puratvdigital/" target="_blank"
+                                    aria-label="Instagram">
+                                    <i class="fab fa-instagram fa-2x text-warning"></i>
+                                </a>
+                                <a href="https://www.facebook.com/profile.php?id=61577027079725" target="_blank"
+                                    aria-label="Facebook">
+                                    <i class="fab fa-facebook fa-2x text-warning"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-8 mb-4 mb-lg-0">
+                        <picture>
+                            <source srcset="images/webp/tv-demo-gratis-24-HORAS-new.webp" type="image/webp" />
+                            <img src="images/tv-demo-gratis-24-HORAS-new.jpg"
+                                alt="Televisor mostrando logotipos de servicios de streaming con un dispositivo Amazon Fire TV Stick. Incluye etiqueta de promoción 'Gratis ₡0 por 24 horas'"
+                                class="img-fluid rounded shadow" />
+                        </picture>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row gy-4">
+                <div class="col-lg-4 col-12">
+                    <img src="/images/logo-Puratv-amarillo.png" alt="PuraTV Digital" class="footer-brand-logo">
+                    <p>IPTV en Costa Rica con +25,000 canales en vivo y +40,000 películas y series, en todos tus dispositivos.</p>
+                    <div class="footer-social">
+                        <a href="https://www.instagram.com/puratvdigital/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/profile.php?id=61577027079725" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="https://wa.me/50686694450" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-6">
+                    <h5>Horarios deportivos</h5>
+                    <ul>
+                        <li><a href="/nba.html">Calendario NBA</a></li>
+                        <li><a href="/nfl.html">Calendario NFL</a></li>
+                        <li><a href="/mlb.html">Calendario MLB</a></li>
+                        <li><a href="/laliga.html">Calendario LaLiga</a></li>
+                        <li><a href="/mundial.html">Mundial FIFA 2026</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-6">
+                    <h5>PuraTV</h5>
+                    <ul>
+                        <li><a href="/index.html#planes">Precios</a></li>
+                        <li><a href="/index.html#oferta">Oferta</a></li>
+                        <li><a href="/index.html#como-funciona">¿Cómo funciona?</a></li>
+                        <li><a href="/index.html#faq">FAQ</a></li>
+                        <li><a href="https://guia.puratv.digital">Guía TV</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-12">
+                    <h5>Manuales de instalación</h5>
+                    <ul>
+                        <li><a href="/manuales/android-tv/">Android TV</a></li>
+                        <li><a href="/manuales/firestick/">Amazon FireStick</a></li>
+                        <li><a href="/manuales/ios/">iOS (iPhone/iPad)</a></li>
+                        <li><a href="/manuales/smart-tv/">Smart TV (Samsung/LG)</a></li>
+                        <li><a href="/manuales/roku/">Roku</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">© 2026 PuraTV Digital. Todos los derechos reservados. · WhatsApp +506 8669 4450 · puratvdigital@gmail.com</div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
+    <script src="/js/pricing-toggle.js" defer></script>
+    <script src="./js/fetch-mundial.js" defer></script>
+    <script src="./js/mundial-standings.js" defer></script>
+</body>
+
+</html>

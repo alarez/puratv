@@ -1,0 +1,28 @@
+{
+    "matches": [
+        {
+            "week": 45,
+            "date": "2025-11-08",
+            "time": "14:00",
+            "home": 1,
+            "away": 2,
+            "channel": "ESPN / DAZN"
+        },
+        {
+            "week": 45,
+            "date": "2025-11-09",
+            "time": "16:30",
+            "home": 3,
+            "away": 5,
+            "channel": "Movistar+"
+        },
+        {
+            "week": 45,
+            "date": "2025-11-10",
+            "time": "19:00",
+            "home": 4,
+            "away": 1,
+            "channel": "ESPN"
+        }
+    ]
+}
