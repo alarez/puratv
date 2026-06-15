@@ -193,6 +193,72 @@ body.fp-viewing-inicio nav {
 
 }
 
+/* ===== Dropdown "Manuales" ===== */
+.navbar .dropdown-menu {
+    background-color: var(--color-bg-dark);
+    border: 1px solid rgba(249, 199, 23, 0.3);
+    border-radius: 12px;
+    padding: 0.5rem 0;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.45);
+}
+
+.navbar .dropdown-item {
+    color: var(--color-text-light);
+    font-weight: 500;
+    padding: 0.55rem 1.3rem;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.navbar .dropdown-item:hover,
+.navbar .dropdown-item:focus,
+.navbar .dropdown-item.active,
+.navbar .dropdown-item:active {
+    background-color: var(--color-primary);
+    color: var(--color-bg-dark);
+}
+
+.navbar .dropdown-divider {
+    border-top-color: rgba(255, 255, 255, 0.15);
+    margin: 0.35rem 0;
+}
+
+.navbar .dropdown-toggle::after {
+    vertical-align: middle;
+    margin-left: 0.4rem;
+    transition: transform 0.2s ease;
+}
+
+/* Apertura en hover (solo desktop, navbar expandido) */
+@media (min-width: 1200px) {
+    .navbar .nav-item.dropdown {
+        position: relative;
+    }
+
+    /* Mostrar y posicionar el menú al pasar el mouse, sin depender del JS */
+    .navbar .nav-item.dropdown:hover > .dropdown-menu {
+        display: block;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: auto;
+        margin-top: 0;
+    }
+
+    .navbar .nav-item.dropdown:hover > .dropdown-toggle::after {
+        transform: rotate(180deg);
+    }
+
+    /* Puente invisible para que el cursor no pierda el hover al bajar al menú */
+    .navbar .nav-item.dropdown:hover > .dropdown-menu::before {
+        content: "";
+        position: absolute;
+        top: -10px;
+        left: 0;
+        right: 0;
+        height: 10px;
+    }
+}
+
 /* ===== END MENU ===== */
 
 .container h1,
@@ -202,7 +268,7 @@ body.fp-viewing-inicio nav {
 }
 
 .hero {
-    background-image: url('../images/tv.jpg');
+    background-image: url('../images/hero-mundial.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -213,18 +279,29 @@ body.fp-viewing-inicio nav {
     z-index: 0;
 }
 
-@supports (background-image: url('../images/webp/tv.webp')) {
+@supports (background-image: url('../images/webp/hero-mundial.webp')) {
     .hero {
-        background-image: url('../images/webp/tv.webp');
+        background-image: url('../images/webp/hero-mundial.webp');
     }
 }
 
 @media (max-width: 767.98px) {
-    @supports (background-image: url('../images/webp/tv-mobile.webp')) {
+    @supports (background-image: url('../images/webp/hero-mundial-mobile.webp')) {
         .hero {
-            background-image: url('../images/webp/tv-mobile.webp');
+            background-image: url('../images/webp/hero-mundial-mobile.webp');
         }
     }
+}
+
+/* Alinear el contenido del hero (h1, texto, botones) con el logo del navbar */
+.hero .row {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.hero .row > [class*="col-"] {
+    padding-left: 0;
+    padding-right: 0;
 }
 
 .section[data-anchor="oferta"] {
@@ -508,6 +585,76 @@ body.fp-viewing-inicio nav {
     color: var(--color-muted);
 }
 
+/* ===== Selector de dispositivos simultáneos ===== */
+.device-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+    background-color: var(--color-bg-light);
+    border-radius: 999px;
+    padding: 6px 6px 6px 22px;
+    margin: 0 auto 45px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.22);
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.device-toggle__label {
+    font-weight: 700;
+    color: var(--color-text-dark);
+    white-space: nowrap;
+}
+
+.device-toggle__options {
+    display: inline-flex;
+    gap: 4px;
+    background-color: var(--color-hover-light);
+    border-radius: 999px;
+    padding: 4px;
+}
+
+.device-toggle__btn {
+    border: 0;
+    background: transparent;
+    color: var(--color-text-dark);
+    font-weight: 600;
+    font-size: 0.95rem;
+    padding: 10px 22px;
+    border-radius: 999px;
+    cursor: pointer;
+    transition: background-color 0.25s ease, color 0.25s ease, box-shadow 0.25s ease;
+    white-space: nowrap;
+}
+
+.device-toggle__btn:hover {
+    background-color: rgba(0, 0, 0, 0.06);
+}
+
+.device-toggle__btn.is-active {
+    background-color: var(--color-bg-dark);
+    color: var(--color-primary);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+}
+
+@media (max-width: 575.98px) {
+    .device-toggle {
+        flex-direction: column;
+        gap: 10px;
+        padding: 14px 14px;
+        border-radius: 20px;
+    }
+
+    .device-toggle__options {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .device-toggle__btn {
+        padding: 9px 16px;
+        font-size: 0.88rem;
+    }
+}
+
 .popular {
     position: relative;
 }
@@ -694,4 +841,30 @@ a:focus,
 body,
 html {
     outline: none !important;
+}
+/* ===== Manuales: sección "¿Problemas durante la instalación?" ===== */
+.manual-troubleshooting {
+    background: #faf8f3;
+    border: 1px solid var(--color-border-light, #e5e5e5);
+    border-radius: 16px;
+    padding: 1.75rem 1.75rem 2rem;
+    margin-top: 3rem;
+}
+
+.manual-troubleshooting > h2 {
+    margin-top: 0;
+    margin-bottom: 1.25rem;
+    color: var(--color-text-dark, #1E1E21);
+}
+
+.manual-troubleshooting-item {
+    background: var(--color-bg-light, #ffffff);
+    border: 1px solid var(--color-border-light, #e5e5e5);
+    border-left: 4px solid var(--color-primary, #F9C717);
+    border-radius: 10px;
+    padding: 0.9rem 1.1rem;
+}
+
+.manual-troubleshooting-item p:last-child {
+    color: var(--color-muted, #444444);
 }

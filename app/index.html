@@ -132,7 +132,7 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
     </noscript>
 
-    <link href="../css/styles.css" rel="stylesheet">
+    <link href="../css/styles.css?v=20260619" rel="stylesheet">
 
     <!-- CSS crítico inline para LCP del h1 -->
     <style>
@@ -162,31 +162,43 @@
 <body>
 
     <!-- Sticky Menu -->
-    <nav class="navbar navbar-expand-lg fixed-top shadow-sm" aria-label="Menú principal">
+        <nav class="navbar navbar-expand-xl fixed-top shadow-sm bg-dark" aria-label="Menú principal">
         <div class="container d-flex justify-content-between align-items-center">
-            <a class="navbar-brand" href="#inicio">
+            <a class="navbar-brand" href="/index.html#inicio">
                 <picture>
                     <source
                         srcset="/images/webp/logo-Puratv-amarillo-small.webp 120w, /images/webp/logo-Puratv-amarillo.webp 2694w"
                         sizes="60px" type="image/webp">
-                    <img src="../images/logo-Puratv-amarillo.png"
+                    <img src="/images/logo-Puratv-amarillo.png"
                         alt="Logo de PuraTV.digital con un tucán estilizado y colores amarillo, naranja y rojo en el pico, acompañado del nombre PuraTV.digital"
                         height="60">
                 </picture>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
-                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Abrir menú">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="navbar-collapse offcanvas-menu" id="navbarNavDropdown">
-                <ul id="menu" class="navbar-nav ms-auto gap-lg-3 gap-2 text-center">
+                <ul id="menu" class="navbar-nav ms-auto gap-xl-2 gap-2 text-center">
                     <li class="nav-item"><a class="nav-link" href="/index.html#inicio">Inicio</a></li>
                     <li class="nav-item"><a class="nav-link" href="/index.html#planes">Planes</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/index.html#compatibilidad">Dispositivos</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="/manuales/" id="manualesMenu">Manuales de instalación</a>
+                        <ul class="dropdown-menu" aria-labelledby="manualesMenu">
+                            <li><a class="dropdown-item" href="/manuales/android-tv/">Android TV</a></li>
+                            <li><a class="dropdown-item" href="/manuales/firestick/">Amazon FireStick</a></li>
+                            <li><a class="dropdown-item" href="/manuales/ios/">iOS (iPhone/iPad)</a></li>
+                            <li><a class="dropdown-item" href="/manuales/android-mobile/">Android (Móvil/Tablet)</a></li>
+                            <li><a class="dropdown-item" href="/manuales/smart-tv/">Smart TV (Samsung/LG)</a></li>
+                            <li><a class="dropdown-item" href="/manuales/roku/">Roku (IPTV Smarters)</a></li>
+                            <li><a class="dropdown-item" href="/manuales/roku-ibo/">Roku (IBO Player)</a></li>
+                        </ul>
+                    </li>
                     <li class="nav-item"><a class="nav-link" href="/index.html#oferta">Oferta</a></li>
                     <li class="nav-item"><a class="nav-link" href="/index.html#como-funciona">¿Cómo funciona?</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/index.html#faq">Preguntas frecuentes</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/index.html#faq">FAQ</a></li>
                     <li class="nav-item"><a class="nav-link" href="/index.html#contacto">Contacto</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://guia.puratv.digital">Guía TV</a></li>
                 </ul>
             </div>
         </div>
