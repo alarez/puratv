@@ -868,3 +868,14 @@ html {
 .manual-troubleshooting-item p:last-child {
     color: var(--color-muted, #444444);
 }
+
+/* Footer como sección fp-auto-height dentro de fullPage.js (index) */
+#fullpage .section.footer-fp {
+    display: block;
+    min-height: 0;
+    height: auto;
+    justify-content: flex-start;
+    align-items: stretch;
+    text-align: left;
+    padding: 0;
+}
