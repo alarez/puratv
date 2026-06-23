@@ -879,3 +879,130 @@ html {
     text-align: left;
     padding: 0;
 }
+
+/* ===== FOOTER (.site-footer) ===== */
+.site-footer {
+    background-color: var(--color-bg-dark);
+    color: var(--color-text-light);
+    padding: 56px 0 28px;
+    text-align: left;
+}
+
+.site-footer .container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+/* Logo del footer: sin esta restricción el PNG (2694x1025) se renderiza
+   a tamaño nativo y rompe el layout. */
+.footer-brand-logo {
+    display: block;
+    width: auto;
+    max-width: 190px;
+    height: auto;
+    margin-bottom: 18px;
+}
+
+.site-footer p {
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    max-width: 340px;
+    margin-bottom: 18px;
+}
+
+.site-footer h5 {
+    color: var(--color-primary);
+    font-size: 1.05rem;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+
+.site-footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.site-footer ul li {
+    margin-bottom: 10px;
+}
+
+.site-footer ul li a {
+    color: rgba(255, 255, 255, 0.82);
+    font-size: 0.95rem;
+    transition: color 0.2s ease;
+}
+
+.site-footer ul li a:hover {
+    color: var(--color-primary);
+    text-decoration: none;
+}
+
+.footer-social {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.footer-social a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.08);
+    color: var(--color-text-light);
+    transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.footer-social a:hover {
+    background-color: var(--color-primary);
+    color: var(--color-bg-dark);
+    transform: translateY(-2px);
+}
+
+.footer-social a img,
+.footer-social a svg {
+    width: 18px;
+    height: 18px;
+    object-fit: contain;
+}
+
+.footer-bottom {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    text-align: center;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.85rem;
+}
+
+.footer-bottom a {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.footer-bottom a:hover {
+    color: var(--color-primary);
+    text-decoration: none;
+}
+
+@media (max-width: 991.98px) {
+    .site-footer {
+        padding: 40px 0 24px;
+        text-align: center;
+    }
+
+    .footer-brand-logo,
+    .site-footer p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .footer-social {
+        justify-content: center;
+    }
+}
